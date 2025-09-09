@@ -18,6 +18,7 @@ L'agente sfrutta esempi, regole di comportamento e accesso diretto a un database
 - **LangChain** – framework per la costruzione di agenti AI
 - **OpenAI** – modello linguistico per l’elaborazione del linguaggio naturale
 - **SQLite + SQLAlchemy** – database relazionale locale e ORM
+- **stramlite** - framework per costruire l'UI
 - **gdown** – per scaricare il file `.db` da Google Drive
 
 ---
@@ -103,12 +104,3 @@ Il database contiene le seguenti tabelle:
 - **Articoli** – articoli ordinati, prezzo, categoria
 
 Il file `.db` viene scaricato automaticamente da Google Drive al primo avvio.
-
----
-
-## Estendibilità
-
-Il progetto è stato pensato in modo modulare:
-- Aggiunta facile di strumenti personalizzati (ad esempio per file CSV o API esterne)
-- Estendibile con **memorie LangChain** o **retrieval-augmented generation (RAG)**
-- Possibilità di integrazione in una Web API o GUI interattiva
