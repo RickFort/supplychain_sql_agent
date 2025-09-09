@@ -38,24 +38,27 @@ L'agente sfrutta esempi, regole di comportamento e accesso diretto a un database
 
 ### `sql_agent_db.py`
 
-> **Funzione:** Crea l’agente AI principale che interroga il database.
+> **Funzione:** Crea l’agente AI che interroga il database.
 
 Contenuti principali:
 - Caricamento del database SQLite da Google Drive (se non esiste localmente)
 - Creazione dell’**engine SQLAlchemy** e connessione al DB
-- Definizione di esempi few-shot: domande e le relative query SQL
+- Utile per sperimentare versioni alternative del modello openai base utilizzato
 - Costruzione del prompt system con istruzioni su tabelle, logica, filtri, limiti
 - Inizializzazione del toolkit LangChain per il database
 - Creazione dell’agente con `create_sql_agent`, usando il tipo `OPENAI_FUNCTIONS`
 
 ### `custom_db_agent.py`
 
-> **Funzione:** Contiene una variante semplificata o personalizzata dell’agente.
+> **Funzione:** Contiene una variante migliorata dell’agente.
 
 Contenuti principali:
 - Possibile uso per agenti con strumenti aggiuntivi o modifiche nel comportamento
 - Inizializzazione separata del toolkit e dell’agente
-- Utile per sperimentare versioni alternative dell’agente standard
+- Definizione di esempi few-shot: domande e le relative query SQL
+- Costruzione del prompt system con istruzioni su tabelle, logica, filtri, limiti
+- Inizializzazione del toolkit LangChain per il database
+- Creazione dell’agente con `create_sql_agent`, usando il tipo `OPENAI_FUNCTIONS`
 
 ### `app.py`
 
