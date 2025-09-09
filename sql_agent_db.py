@@ -95,7 +95,7 @@ def db_agent(model_llm=LLM_MODEL,
              format_instructions =format_instructions,
              top_k=10):
     llm = ChatOpenAI(model=model_llm,
-                     temperature=0.0, # rendiamo il modello deterministico
+                     temperature=0.0,
                      verbose=True)
     toolkit = SQLDatabaseToolkit(db=db, llm=llm)
     context = toolkit.get_context()
@@ -115,5 +115,5 @@ def db_agent(model_llm=LLM_MODEL,
                             toolkit=toolkit,
                             prefix=formatted_prefix ,
                             verbose=True,
-                            format_instrutions=format_instructions,
+                            format_instructions=format_instructions,
                             agent_type=AgentType.OPENAI_FUNCTIONS,)
